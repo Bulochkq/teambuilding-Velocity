@@ -46,12 +46,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .content { padding: 40px 30px; }
         .intro { font-size: 16px; line-height: 1.6; color: #555555; margin-top: 0; margin-bottom: 30px; }
         .table-wrapper { border: 1px solid #E9ECEF; border-radius: 12px; overflow: hidden; margin-bottom: 30px; }
-        table { width: 100%; border-collapse: collapse; }
-        td { padding: 14px 18px; font-size: 14px; line-height: 1.5; border-bottom: 1px solid #E9ECEF; }
+        table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+        td { padding: 14px 18px; font-size: 14px; line-height: 1.5; border-bottom: 1px solid #E9ECEF; word-wrap: break-word; word-break: break-word; overflow-wrap: break-word; }
         tr:last-child td { border-bottom: none; }
         td.label { font-weight: bold; color: #8E8E8E; width: 150px; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; }
         td.value { color: #111111; font-weight: 500; }
-        .note-box { background-color: #F8F9FA; border-left: 4px solid #111111; padding: 15px 20px; border-radius: 0 8px 8px 0; margin-top: 5px; font-style: italic; color: #333333; line-height: 1.6; }
+        .note-box { background-color: #F8F9FA; border-left: 4px solid #111111; padding: 15px 20px; border-radius: 0 8px 8px 0; margin-top: 5px; font-style: italic; color: #333333; line-height: 1.6; word-wrap: break-word; word-break: break-word; overflow-wrap: break-word; }
         .footer { background-color: #F8F9FA; padding: 20px; text-align: center; font-size: 11px; color: #8E8E8E; border-top: 1px solid #E9ECEF; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
     </style>
 </head>
