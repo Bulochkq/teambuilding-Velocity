@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Preferovaný termín: " . $termin . "\n";
     $message .= "Poznámka / Predstava:\n" . $poznamka . "\n\n";
     
-    $headers = "From: web@velocity.sk\r\n";
+    $headers = "From: " . $to . "\r\n";
     $headers .= "Reply-To: " . $email . "\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
