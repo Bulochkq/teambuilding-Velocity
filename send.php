@@ -88,13 +88,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <td class="label">Termín</td>
                         <td class="value">' . $termin . '</td>
                     </tr>
-                    <tr>
-                        <td class="label" style="vertical-align: top; padding-top: 18px;">Poznámka</td>
-                        <td class="value" style="padding-top: 18px;">
-                            <div class="note-box">' . nl2br($poznamka) . '</div>
-                        </td>
-                    </tr>
                 </table>
+            </div>
+
+            <div class="note-section" style="margin-top: 25px;">
+                <div class="note-title" style="font-weight: bold; color: #8E8E8E; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px;">Poznámka / Predstava:</div>
+                <div class="note-box">' . nl2br($poznamka) . '</div>
             </div>
         </div>
         <div class="footer">
