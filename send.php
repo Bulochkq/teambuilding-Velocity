@@ -3,7 +3,7 @@ ini_set('display_errors', 0);
 error_reporting(0);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Oтримуємо та очищаємо дані з форми
+    // Get and sanitize form input
     $meno = htmlspecialchars(trim($_POST["meno"]));
     $firma = htmlspecialchars(trim($_POST["firma"]));
     $email = htmlspecialchars(trim($_POST["email"]));
@@ -12,14 +12,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $termin = htmlspecialchars(trim($_POST["termin"]));
     $poznamka = htmlspecialchars(trim($_POST["poznamka"]));
 
-    // Очищення пошти та назви фірми від переносів рядків (захист від ін'єкцій у заголовки)
+    // Prevent header injection
     $email = str_replace(array("\r", "\n"), '', $email);
     $firma = str_replace(array("\r", "\n"), '', $firma);
 
-    // Визначаємо, чи це AJAX-запит
+    // Check if AJAX request
     $isAjax = (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') || isset($_POST['ajax']);
 
-    // Валідація на наявність обов'язкових полів на стороні сервера
+    // Server-side validation
     if (empty($meno) || empty($email) || empty($telefon)) {
         if ($isAjax) {
             http_response_code(400);
@@ -30,11 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Налаштування email
-    $to = "bulochkq@gmail.com";
+    // Email settings
+    $to = "ustymenko@velocity.sk";
     $subject = "Nová žiadosť o teambuilding - " . $firma;
     
-    // Формування тіла листа
+    // Email body
     $message = "Dobrý deň,\n\nmáte novú žiadosť o nezáväzný návrh cyklo teambuildingu z webu teambuilding.velocity.sk:\n\n";
     $message .= "Meno: " . $meno . "\n";
     $message .= "Firma: " . $firma . "\n";
@@ -44,12 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Preferovaný termín: " . $termin . "\n";
     $message .= "Poznámka / Predstava:\n" . $poznamka . "\n\n";
     
-    // Заголовки листа
+    // Email headers
     $headers = "From: web@velocity.sk\r\n";
     $headers .= "Reply-To: " . $email . "\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // Відправка та перенаправлення
+    // Send email and redirect/respond
     if (@mail($to, $subject, $message, $headers)) {
         if ($isAjax) {
             echo "success";
