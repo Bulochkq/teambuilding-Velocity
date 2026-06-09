@@ -127,7 +127,14 @@
                             accent: '#8E8E8E',
                             green: '#222222',
                             light: '#F8F9FA',
-                            gray: '#E9ECEF'
+                            gray: '#E9ECEF',
+                            orange: '#E57C53',
+                            orangeHover: '#C9643B',
+                            blue: '#54759A',
+                            blueHover: '#445D7C',
+                            purple: '#8165A1',
+                            purpleHover: '#685082',
+                            yellow: '#F3D015'
                         }
                     }
                 }
@@ -257,7 +264,7 @@
 
         /* Button Glow & Hover effects */
         .btn-glow:hover {
-            box-shadow: 0 10px 25px -5px rgba(31, 36, 33, 0.3), 0 8px 10px -6px rgba(31, 36, 33, 0.3);
+            box-shadow: 0 10px 25px -5px rgba(229, 124, 83, 0.4), 0 8px 10px -6px rgba(229, 124, 83, 0.4);
         }
 
         .btn-glow-accent:hover {
@@ -292,15 +299,15 @@
         /* Pulse Glow Animations */
         @keyframes pulse-glow {
             0% {
-                box-shadow: 0 0 0 0 rgba(31, 36, 33, 0.4);
+                box-shadow: 0 0 0 0 rgba(229, 124, 83, 0.5);
             }
 
             70% {
-                box-shadow: 0 0 0 10px rgba(31, 36, 33, 0);
+                box-shadow: 0 0 0 10px rgba(229, 124, 83, 0);
             }
 
             100% {
-                box-shadow: 0 0 0 0 rgba(31, 36, 33, 0);
+                box-shadow: 0 0 0 0 rgba(229, 124, 83, 0);
             }
         }
 
@@ -414,12 +421,12 @@
                         class="h-8 sm:h-9 md:h-10 w-auto">
                     <span class="h-4 sm:h-5 w-px bg-gray-200 hidden sm:inline-block"></span>
                     <span id="logo-badge"
-                        class="hidden sm:inline-block text-[9px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest text-gray-400 px-2 py-1 sm:px-3.5 sm:py-1.5 rounded-full transition-all duration-300">Teambuilding</span>
+                        class="hidden sm:inline-block text-[9px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full transition-all duration-300">Teambuilding</span>
                 </a>
 
                 <!-- CTA button visible on mobile (in the top row) -->
                 <a href="#kontakt"
-                    class="xl:hidden bg-brand-green text-white px-5 py-2 sm:px-8 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:bg-brand-dark transition duration-300 shadow-sm whitespace-nowrap">
+                    class="xl:hidden bg-brand-orange text-white px-5 py-2 sm:px-8 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:bg-brand-orangeHover transition duration-300 shadow-sm whitespace-nowrap">
                     Získať nezáväzný návrh
                 </a>
             </div>
@@ -467,7 +474,7 @@
 
             <!-- Column 3: Desktop CTA Button (Pushed further right via flex layout, flex-shrink-0) -->
             <a href="#kontakt"
-                class="hidden xl:block bg-brand-green text-white px-10 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-brand-dark hover:-translate-y-0.5 transition duration-300 btn-shine block text-center shadow-md whitespace-nowrap flex-shrink-0">
+                class="hidden xl:block bg-brand-orange text-white px-10 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-brand-orangeHover hover:-translate-y-0.5 transition duration-300 btn-shine block text-center shadow-md whitespace-nowrap flex-shrink-0">
                 Získať nezáväzný návrh
             </a>
         </div>
@@ -475,8 +482,8 @@
 
     <main>
         <section class="relative pt-36 pb-20 px-6 min-h-[95vh] flex items-center hero-bg">
-            <div class="hero-shape organic-blob-1 bg-brand-accent/30 w-[40vw] h-[40vw] top-[-10%] right-[-10%]"></div>
-            <div class="hero-shape organic-blob-2 bg-white/40 w-[50vw] h-[50vw] bottom-[-20%] left-[-20%]"
+            <div class="hero-shape organic-blob-1 bg-brand-orange/25 w-[40vw] h-[40vw] top-[-10%] right-[-10%]"></div>
+            <div class="hero-shape organic-blob-2 bg-brand-purple/20 w-[50vw] h-[50vw] bottom-[-20%] left-[-20%]"
                 style="animation-delay: -5s;"></div>
 
             <!-- Winding Bike Path SVG Illustration (Minimalist Accent) -->
@@ -492,14 +499,14 @@
                 <!-- Left Column: Content (Intro Block) -->
                 <div class="text-center lg:text-left lg:col-start-1 lg:row-start-1 reveal">
                     <span
-                        class="inline-block py-1.5 px-5 rounded-full glass text-brand-green text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
+                        class="inline-block py-1.5 px-5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-widest mb-6 shadow-sm animate-pulse-slow">
                         Firemné cyklo zážitky na mieru
                     </span>
 
                     <h1
                         class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.08] tracking-tight mb-6">
                         Teambuilding, ktorý si váš tím <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-dark to-brand-green">naozaj
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-dark to-brand-orange">naozaj
                             užije.</span>
                     </h1>
 
@@ -511,7 +518,7 @@
 
                     <div class="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center items-center">
                         <a href="#kontakt"
-                            class="w-full sm:w-auto text-center bg-brand-green text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-brand-dark transition duration-300 transform hover:-translate-y-1 hover:scale-[1.02] active:scale-95 btn-glow btn-pulse btn-shine relative overflow-hidden shadow-lg">
+                            class="w-full sm:w-auto text-center bg-brand-orange text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-brand-orangeHover transition duration-300 transform hover:-translate-y-1 hover:scale-[1.02] active:scale-95 btn-glow btn-pulse btn-shine relative overflow-hidden shadow-lg">
                             Získať nezáväzný návrh
                         </a>
                         <a href="#preco"
@@ -525,7 +532,7 @@
                 <div
                     class="relative w-full max-w-lg lg:max-w-none mx-auto lg:mt-0 mt-8 lg:col-start-2 lg:row-start-1 lg:row-span-2 order-2 lg:order-none reveal delay-200 select-none">
                     <!-- Glowing Background -->
-                    <div class="absolute -inset-4 bg-brand-accent/20 rounded-[2.5rem] blur-2xl z-0"></div>
+                    <div class="absolute -inset-4 bg-brand-orange/15 rounded-[2.5rem] blur-2xl z-0"></div>
 
                     <!-- Main Image Frame -->
                     <div
@@ -642,42 +649,42 @@
                         <div
                             class="bg-brand-light py-5 px-6 rounded-2xl flex items-center gap-4 hover:shadow-md hover:-translate-y-1 transition duration-300">
                             <div
-                                class="w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold">
+                                class="w-8 h-8 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center font-bold">
                                 ✓</div>
                             <h3 class="font-bold text-sm">Prirodzene spája tím</h3>
                         </div>
                         <div
                             class="bg-brand-light py-5 px-6 rounded-2xl flex items-center gap-4 hover:shadow-md hover:-translate-y-1 transition duration-300">
                             <div
-                                class="w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold">
+                                class="w-8 h-8 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center font-bold">
                                 ✓</div>
                             <h3 class="font-bold text-sm">Pohyb zlepšuje náladu</h3>
                         </div>
                         <div
                             class="bg-brand-light py-5 px-6 rounded-2xl flex items-center gap-4 hover:shadow-md hover:-translate-y-1 transition duration-300">
                             <div
-                                class="w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold">
+                                class="w-8 h-8 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center font-bold">
                                 ✓</div>
                             <h3 class="font-bold text-sm">Aktivita aj pre nešportovcov</h3>
                         </div>
                         <div
                             class="bg-brand-light py-5 px-6 rounded-2xl flex items-center gap-4 hover:shadow-md hover:-translate-y-1 transition duration-300">
                             <div
-                                class="w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold">
+                                class="w-8 h-8 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center font-bold">
                                 ✓</div>
                             <h3 class="font-bold text-sm">E-biky vyrovnávajú rozdiely</h3>
                         </div>
                         <div
                             class="bg-brand-light py-5 px-6 rounded-2xl flex items-center gap-4 hover:shadow-md hover:-translate-y-1 transition duration-300">
                             <div
-                                class="w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold">
+                                class="w-8 h-8 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center font-bold">
                                 ✓</div>
                             <h3 class="font-bold text-sm">Ideálna kombinácia aktivity a oddychu</h3>
                         </div>
                         <div
                             class="bg-brand-light py-5 px-6 rounded-2xl flex items-center gap-4 hover:shadow-md hover:-translate-y-1 transition duration-300">
                             <div
-                                class="w-8 h-8 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center font-bold">
+                                class="w-8 h-8 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center font-bold">
                                 ✓</div>
                             <h3 class="font-bold text-sm">Trasy aj program na mieru</h3>
                         </div>
@@ -1154,50 +1161,50 @@
                                     class="text-sm text-gray-400 font-medium"> / osoba</span></div>
                             <ul class="space-y-4 mb-8 text-gray-700 text-sm">
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-green flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-blue flex-shrink-0 mt-0.5"></span>
                                     zapožičanie bicyklov</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-green flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-blue flex-shrink-0 mt-0.5"></span>
                                     organizácia</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-green flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-blue flex-shrink-0 mt-0.5"></span>
                                     základné inštrukcie</li>
                             </ul>
                             <a href="#kontakt"
-                                class="mt-auto w-full text-center bg-[#E9ECEF] text-[#222222] py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-brand-green hover:text-white transition duration-300 shadow-sm active:scale-95 block">
+                                class="mt-auto w-full text-center bg-[#E9ECEF] text-[#222222] py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-brand-blue hover:text-white transition duration-300 shadow-sm active:scale-95 block">
                                 Mám záujem o Basic
                             </a>
                         </div>
 
                         <!-- Standard Card -->
                         <div
-                            class="w-[290px] sm:w-[320px] lg:w-auto flex-shrink-0 bg-brand-dark text-white rounded-[2rem] p-8 reveal delay-200 flex flex-col relative shadow-2xl lg:-translate-y-4 border border-white/10">
+                            class="w-[290px] sm:w-[320px] lg:w-auto flex-shrink-0 bg-brand-blue text-white rounded-[2rem] p-8 reveal delay-200 flex flex-col relative shadow-2xl lg:-translate-y-4 border border-brand-blue/20">
                             <h3 class="font-heading text-2xl font-bold mb-2">STANDARD</h3>
                             <div
-                                class="self-start mb-4 sm:absolute sm:top-6 sm:right-6 sm:mb-0 bg-brand-accent text-brand-dark text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-sm">
+                                class="self-start mb-4 sm:absolute sm:top-6 sm:right-6 sm:mb-0 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-sm">
                                 Častá voľba</div>
-                            <p class="text-gray-400 mb-6 flex-grow text-sm">Najobľúbenejšia voľba pre firemné tímy.</p>
+                            <p class="text-gray-200 mb-6 flex-grow text-sm">Najobľúbenejšia voľba pre firemné tímy.</p>
                             <div class="text-4xl font-black mb-8 text-white">od 79 €<span
-                                    class="text-sm text-gray-400 font-medium"> / osoba</span></div>
-                            <ul class="space-y-4 mb-8 text-gray-300 text-sm">
+                                    class="text-sm text-gray-200 font-medium"> / osoba</span></div>
+                            <ul class="space-y-4 mb-8 text-gray-100 text-sm">
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-orange flex-shrink-0 mt-0.5"></span>
                                     zapožičanie bicyklov</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-orange flex-shrink-0 mt-0.5"></span>
                                     organizácia</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-orange flex-shrink-0 mt-0.5"></span>
                                     návrh trasy</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-orange flex-shrink-0 mt-0.5"></span>
                                     možnost technického sprievodu</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-orange flex-shrink-0 mt-0.5"></span>
                                     hotline podpora počas akcie</li>
                             </ul>
                             <a href="#kontakt"
-                                class="mt-auto w-full text-center bg-brand-accent text-brand-dark py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-white hover:text-brand-dark transition duration-300 shadow-md active:scale-95 block">
+                                class="mt-auto w-full text-center bg-white text-brand-blue py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-brand-orange hover:text-white transition duration-300 shadow-md active:scale-95 block">
                                 Mám záujem o Standard
                             </a>
                         </div>
@@ -1211,32 +1218,32 @@
                                     class="text-sm text-gray-400 font-medium"> / osoba</span></div>
                             <ul class="space-y-4 mb-8 text-gray-700 text-sm">
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-green flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-purple flex-shrink-0 mt-0.5"></span>
                                     zapožičanie bicyklov</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-green flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-purple flex-shrink-0 mt-0.5"></span>
                                     organizácia</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-green flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-purple flex-shrink-0 mt-0.5"></span>
                                     návrh trasy</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-green flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-purple flex-shrink-0 mt-0.5"></span>
                                     technický sprievod</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-green flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-purple flex-shrink-0 mt-0.5"></span>
                                     kompletný program</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-green flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-purple flex-shrink-0 mt-0.5"></span>
                                     súťaže a aktivity</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-green flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-purple flex-shrink-0 mt-0.5"></span>
                                     občerstvenie a piknik</li>
                                 <li class="flex items-center gap-3"><span
-                                        class="w-1.5 h-1.5 rounded-full bg-brand-green flex-shrink-0 mt-0.5"></span>
+                                        class="w-1.5 h-1.5 rounded-full bg-brand-purple flex-shrink-0 mt-0.5"></span>
                                     branding podľa firmy</li>
                             </ul>
                             <a href="#kontakt"
-                                class="mt-auto w-full text-center bg-[#E9ECEF] text-[#222222] py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-brand-green hover:text-white transition duration-300 shadow-sm active:scale-95 block">
+                                class="mt-auto w-full text-center bg-[#E9ECEF] text-[#222222] py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-brand-purple hover:text-white transition duration-300 shadow-sm active:scale-95 block">
                                 Mám záujem o Premium
                             </a>
                         </div>
@@ -1350,14 +1357,14 @@
                                 <label
                                     class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Meno</label>
                                 <input type="text" id="meno" name="meno" maxlength="100"
-                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-green transition">
+                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition">
                                 <span class="error-msg text-red-500 text-xs hidden mt-1">Prosím, zadajte meno.</span>
                             </div>
                             <div>
                                 <label
                                     class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Firma</label>
                                 <input type="text" id="firma" name="firma" maxlength="100"
-                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-green transition">
+                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition">
                                 <span class="error-msg text-red-500 text-xs hidden mt-1">Prosím, zadajte firmu.</span>
                             </div>
                         </div>
@@ -1366,7 +1373,7 @@
                                 <label
                                     class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">E-mail</label>
                                 <input type="email" id="email" name="email" placeholder="napr. meno@firma.sk" maxlength="100"
-                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-green transition">
+                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition">
                                 <span class="error-msg text-red-500 text-xs hidden mt-1">Prosím, zadajte platný
                                     e-mail.</span>
                             </div>
@@ -1374,7 +1381,7 @@
                                 <label
                                     class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Telefón</label>
                                 <input type="tel" id="telefon" name="telefon" placeholder="napr. +421 903 123 456" maxlength="30"
-                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-green transition">
+                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition">
                                 <span class="error-msg text-red-500 text-xs hidden mt-1">Prosím, zadajte telefónne
                                     číslo.</span>
                             </div>
@@ -1385,14 +1392,14 @@
                                     class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Počet
                                     ľudí</label>
                                 <input type="text" id="pocet" name="pocet" placeholder="napr. 15" maxlength="50"
-                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-green transition">
+                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition">
                                 <span class="error-msg text-red-500 text-xs hidden mt-1">Prosím, zadajte počet.</span>
                             </div>
                             <div>
                                 <label
                                     class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Termín</label>
                                 <input type="text" id="termin" name="termin" placeholder="napr. jún" maxlength="50"
-                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-green transition">
+                                    class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition">
                             </div>
                         </div>
                         <div>
@@ -1400,22 +1407,22 @@
                                 class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Poznámka
                                 / Predstava</label>
                             <textarea id="poznamka" name="poznamka" rows="4" maxlength="2000"
-                                class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-green transition resize-none"></textarea>
+                                class="w-full bg-[#F8F9FA] text-brand-dark caret-brand-dark border-2 border-transparent rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition resize-none"></textarea>
                         </div>
                         <div class="flex items-start gap-3 mt-4">
                             <input type="checkbox" id="gdpr"
-                                class="mt-1 w-4 h-4 text-brand-green bg-[#F8F9FA] border-transparent rounded focus:ring-brand-green">
+                                class="mt-1 w-4 h-4 text-brand-orange bg-[#F8F9FA] border-transparent rounded focus:ring-brand-orange">
                             <label for="gdpr" class="text-xs text-gray-500 leading-tight">Súhlasím so spracovaním mojich
                                 osobných údajov na účely spätného kontaktovania a vybavenia dopytu v súlade so <a
                                     href="https://www.velocity.sk/sekcia/spracovanie-osobnych-udajov/" target="_blank"
-                                    class="underline text-brand-dark hover:text-brand-green transition">zásadami ochrany
+                                    class="underline text-brand-dark hover:text-brand-orange transition">zásadami ochrany
                                     osobných údajov</a>.</label>
                         </div>
                         <span id="gdpr-error" class="error-msg text-red-500 text-xs hidden">Musíte súhlasiť so
                             spracovaním údajov.</span>
 
                         <button type="submit" id="submit-btn"
-                            class="w-full bg-brand-green text-white font-bold uppercase tracking-widest text-sm py-4 rounded-xl hover:bg-brand-dark transition shadow-lg mt-6 relative overflow-hidden group btn-shine">
+                            class="w-full bg-brand-orange text-white font-bold uppercase tracking-widest text-sm py-4 rounded-xl hover:bg-brand-orangeHover transition shadow-lg mt-6 relative overflow-hidden group btn-shine">
                             <span
                                 class="relative z-10 group-hover:-translate-y-10 transition-transform duration-300 block">Získať
                                 nezáväzný návrh</span>
