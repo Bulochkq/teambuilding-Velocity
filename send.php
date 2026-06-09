@@ -17,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $isAjax = (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') || isset($_POST['ajax']);
 
     $isEmailValid = filter_var($email, FILTER_VALIDATE_EMAIL);
-    $isPhoneValid = preg_match('/^[\s()+-]*([0-9][\s()+-]*){7,20}$/', $telefon);
+    $isPhoneValid = empty($telefon) || preg_match('/^[\s()+-]*([0-9][\s()+-]*){7,20}$/', $telefon);
 
-    if (empty($meno) || empty($email) || empty($telefon) || !$isEmailValid || !$isPhoneValid) {
+    if (empty($meno) || empty($email) || !$isEmailValid || !$isPhoneValid) {
         if ($isAjax) {
             http_response_code(400);
             echo "error_invalid_input";
