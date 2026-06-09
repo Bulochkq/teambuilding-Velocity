@@ -29,9 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $to = "ustymenko@velocity.sk";
+    $to = "silvia@velocity.sk";
     $subject = "Nová žiadosť o teambuilding - " . $firma;
-    
+
     $message = '<!DOCTYPE html>
 <html>
 <head>
@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </body>
 </html>';
-    
+
     $headers = "From: " . $to . "\r\n";
     $headers .= "Reply-To: " . $email . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
